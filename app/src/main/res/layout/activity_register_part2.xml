@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mstb="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".SecondFragment">
+<!--    android:background="@color/grey">-->
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar" />
+
+    <TextView
+        android:id="@+id/textview_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do you make..."
+        android:textSize="35sp"
+        android:textColor="#fff"/>
+
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/sptype"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:background="#fff"
+        android:hint="Content Type"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/spgenre"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:background="#fff"
+        android:hint="Genre"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:id="@+id/etpassword"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:background="#fff"
+        android:hint="Enter Password" />
+
+    <com.cunoraz.tagview.TagView
+        xmlns:tagview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tag_group"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        tagview:lineMargin="5dp"
+        tagview:tagMargin="5dp"
+        tagview:textPaddingLeft="8dp"
+        tagview:textPaddingTop="5dp"
+        tagview:textPaddingRight="8dp"
+        tagview:textPaddingBottom="5dp"
+        android:background="#fff"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/white"
+        android:text="Get Started"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:paddingTop="10dp"
+        android:id="@+id/sign_in_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
