@@ -39,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         mETfname = findViewById(R.id.etfname);
         mETlname = findViewById(R.id.etlname);
         mETpassword = findViewById(R.id.etpassword);
+        btnSignUp = findViewById(R.id.btnSignUp);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -75,7 +76,9 @@ public class RegisterActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             progressDialog.dismiss();
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(RegisterActivity.this, "Registered...."+user.getEmail(), Toast.LENGTH_SHORT).show(), startActivity(new Intent(RegisterActivity.this, MyProfileActivity.class));
+                            Toast.makeText(RegisterActivity.this, "Registered...."+user.getEmail(), Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(RegisterActivity.this, MyProfileActivity.class));
+                            finish();
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(RegisterActivity.this, "Authentication failed.",
