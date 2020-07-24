@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText mETfname, mETlname, mETemail, mETpassword;
     Button btnSignUp;
+    TextView tvLogin;
 
     ProgressDialog progressDialog;
 
@@ -40,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         mETlname = findViewById(R.id.etlname);
         mETpassword = findViewById(R.id.etpassword);
         btnSignUp = findViewById(R.id.btnSignUp);
+        tvLogin = findViewById(R.id.tvlogin);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -61,6 +64,13 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     registerUser(email, password);
                 }
+            }
+        });
+
+        tvLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
     }
